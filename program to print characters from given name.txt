@@ -1,0 +1,45 @@
+//program to print characters from given name
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    char*ptr;
+    ptr=str;
+    scanf("%s",str);
+    printf("%c",*ptr);
+    return 0;
+}
+//output
+Karunya
+K
+______________________________________________
+//program to print characters from given name
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    char*ptr;
+    ptr=str;
+    scanf("%s",str);
+    printf("%c",*(ptr+2));
+    return 0;
+}
+//output
+Karunya
+r
+________________________________________________
+//program to print characters from given name
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    char*ptr;
+    ptr=str;
+    scanf("%s",str);
+    printf("%c",*(ptr+3));
+    return 0;
+}
+//output
+Karunya
+u
+________________________________________________
