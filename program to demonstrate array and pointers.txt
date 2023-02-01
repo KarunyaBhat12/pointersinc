@@ -1,0 +1,36 @@
+//program to demonstrate array and pointers
+#include <stdio.h>
+
+int main()
+{
+    char str[100];
+    scanf("%s",str);
+    printf("%c",*str);
+
+    return 0;
+}
+//output
+Karunya
+K
+_____________________________________________
+//program to demonstrate array and pointers
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    char str[] = "Karunya";
+    int len=strlen(str);
+    for(int i=0;i<len;i++)
+      printf("%s\n",str+i);
+    return 0;
+}
+//output
+Karunya
+arunya
+runya
+unya
+nya
+ya
+a
+_______________________________________________
