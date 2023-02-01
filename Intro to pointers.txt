@@ -9,3 +9,76 @@ int main()
 }
 //output
 10
+________________________
+//Demonstrate pointers
+#include <stdio.h>
+int main()
+{
+    int x=20;
+    printf("%d\n",x);
+    printf("%d",*(&x));
+    return 0;
+}
+//output
+20
+20
+_________________________
+//Demonstrate pointers
+#include <stdio.h>
+int main()
+{
+    int x=20;
+    int *ptr; //pointer variable
+    ptr=20;//normal integer cannot be assigned in pointer[warning]
+    printf("%d\n",x);
+    printf("%d",*(&x));
+    return 0;
+}
+//output
+main.c: In function ‘main’:
+main.c:7:8: warning: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+    7 |     ptr=20;
+      |        ^
+20
+20
+__________________________________________________________________________________________________________________
+//Demonstrate pointers
+#include <stdio.h>
+int main()
+{
+    int x=20;
+    int *ptr; //pointer variable
+    ptr=&x;
+    printf("%d\t",x);
+    printf("%d\t",*(&x));//* means value at this location
+    printf("%d\t",*ptr);
+    printf("\n%p\t",&x);
+    printf("%p\t",ptr);
+    printf("%p\t",&ptr);
+    return 0;
+}
+//output
+0      20      20
+0x7ffc0503337c  0x7ffc0503337c  0x7ffc05033380ublic // here first two address is same
+_________________________________________________________________________________________________________________
+//Demonstrate pointers
+#include <stdio.h>
+int main()
+{
+    int x=20;
+    int *ptr; //pointer variable
+    ptr=&x;
+    *ptr=200;
+    x++;
+    printf("%d\t",x);
+    printf("%d\t",*(&x));//* means value at this location
+    printf("%d\t",*ptr);
+    printf("\n%p\t",&x);
+    printf("%p\t",ptr);
+    printf("%p\t",&ptr);
+    return 0;
+}
+//output
+201     201     201
+0x7ffcac7fdd2c  0x7ffcac7fdd2c  0x7ffcac7fdd30
+___________________________________________________________________________________________________________________
