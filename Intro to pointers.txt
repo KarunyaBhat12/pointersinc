@@ -60,7 +60,7 @@ int main()
 //output
 0      20      20
 0x7ffc0503337c  0x7ffc0503337c  0x7ffc05033380ublic // here first two address is same
-_________________________________________________________________________________________________________________
+____________________________________________________________________________________________
 //Demonstrate pointers
 #include <stdio.h>
 int main()
@@ -68,7 +68,7 @@ int main()
     int x=20;
     int *ptr; //pointer variable
     ptr=&x;
-    *ptr=200;
+    *ptr=200;//value of x is changed to 200
     x++;
     printf("%d\t",x);
     printf("%d\t",*(&x));//* means value at this location
@@ -81,4 +81,25 @@ int main()
 //output
 201     201     201
 0x7ffcac7fdd2c  0x7ffcac7fdd2c  0x7ffcac7fdd30
-___________________________________________________________________________________________________________________
+__________________________________________________________________________________________
+//Demonstrate pointers
+#include <stdio.h>
+int main()
+{
+    int x=20;
+    int *ptr; //pointer variable
+    ptr=&x;
+    *ptr++=200;
+    x++;
+    printf("%d\t",x);
+    printf("%d\t",*(&x));//* means value at this location
+    printf("%d\t",*ptr);
+    printf("\n%p\t",&x);
+    printf("%p\t",ptr);
+    printf("%p\t",&ptr);
+    return 0;
+}
+//output
+201     201     -1287057792
+0x7ffcb3490e7c  0x7ffcb3490e80  0x7ffcb3490e80
+____________________________________________________________________________________________
