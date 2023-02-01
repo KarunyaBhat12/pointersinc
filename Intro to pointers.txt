@@ -1,0 +1,11 @@
+//Demonstrate pointers
+#include <stdio.h>
+int main()
+{
+    int a=10,x=10,y=20;
+    printf("%d",*&(a));
+
+    return 0;
+}
+//output
+10
